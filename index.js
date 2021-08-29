@@ -124,7 +124,9 @@ const init = () => {
     )
     .then(
         (entries) => {
-            console.log(entries);
+            entries.forEach(entry => {
+                notionAPI.createEntry(entry);
+            });
         }
     )
     

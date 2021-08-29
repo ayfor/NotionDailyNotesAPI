@@ -14,7 +14,7 @@ const getDates = async ()=> {
     console.log(res);
 }
 
-const createEntry = async () => {
+const createEntry = async (entry) => {
     const res = await notion.pages.create({
         parent:{
             database_id:databaseId
@@ -24,20 +24,18 @@ const createEntry = async () => {
                 title: [
                     {
                         text: {
-                            content: 'Sample: September 1st, 2021'
+                            content: `${entry.dateName}`
                         }
                     }
                 ]
             },
             Date: {
                 date:{
-                    start: '2021-09-01', //year-month-day
+                    start: `${entry.date}`, //year-month-day
                 }
             }
         }
     })
-
-    console.log(res);
 }
 
 module.exports = { getDates, createEntry };
