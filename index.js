@@ -1,5 +1,3 @@
-const { databasesList } = require('@notionhq/client/build/src/api-endpoints');
-const express = require('express');
 const inquirer = require('inquirer')
 const notionAPI = require('./services/notion')
 
@@ -118,12 +116,12 @@ const init = () => {
     promptUser()
     .then(
         (answers) => { 
-            console.log(answers)
-             return generateEntries(answers); 
+            return generateEntries(answers); 
         }
     )
     .then(
         (entries) => {
+            console.log("Adding entries to database...")
             entries.forEach(entry => {
                 notionAPI.createEntry(entry);
             });
