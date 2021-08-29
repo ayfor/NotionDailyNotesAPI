@@ -1,0 +1,30 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "daily notes api for Notion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayfor/NotionDailyNotesAPI.git"
+  },
+  "keywords": [
+    "Notion",
+    "Daily",
+    "Notes"
+  ],
+  "author": "Ayfor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayfor/NotionDailyNotesAPI/issues"
+  },
+  "homepage": "https://github.com/ayfor/NotionDailyNotesAPI#readme",
+  "dependencies": {
+    "@notionhq/client": "^0.1.9",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "inquirer": "^8.1.2"
+  }
+}
